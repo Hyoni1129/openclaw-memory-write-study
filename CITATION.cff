@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: Please cite this paper when referencing the results.
+title: An Analysis of Long-term Memory Write for Web-Exposed Malicious Instructions in LLM Agents
+type: conference-paper
+authors:
+  - family-names: Lee
+    given-names: Jeonghan
+  - family-names: Ji
+    given-names: Jeonil
+  - family-names: Cho
+    given-names: Geumhwan
+year: 2026
+repository-code: https://github.com/Hyoni1129/openclaw-memory-write-study
