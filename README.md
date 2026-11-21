@@ -1,4 +1,4 @@
-![An Analysis of Long-term Memory Write for Web-Exposed Malicious Instructions in LLM Agents — Jeonghan Lee, Jeonil Ji, and Geumhwan Cho; Korea University, Sejong Campus, 2026](assets/academic-paper-title.svg)
+![Paper title, authors, and affiliation](assets/paper-title-header.png)
 
 <img src="assets/kisa-logo.png" alt="KISA — Korea Internet & Security Agency" width="118">
 
@@ -14,11 +14,9 @@ Long-term memory allows LLM agents to retain acquired information after a sessio
 
 *Figure 1. Exposure and persistent-memory write process.*
 
-## Experimental design and results
+## Experiment
 
 Thirty webpages were prepared across three categories: community posts, product reviews, and secondhand listings. The same scenarios were tested with GPT-5.6 Sol, Terra, and Luna.
-
-### Three-model evaluation
 
 | Model | Malicious instruction observed | Long-term memory write | Malicious instruction stored |
 |:--|--:|--:|--:|
@@ -27,8 +25,6 @@ Thirty webpages were prepared across three categories: community posts, product 
 | Luna | 30/30 | 1/30 | 0/30 |
 
 All three models encountered the injected instructions. Luna made one memory write, but the stored information was unrelated to the injected instruction.
-
-### Instruction-delivery conditions
 
 Three additional conditions using Terra examined how the instruction was delivered.
 
@@ -40,7 +36,7 @@ Three additional conditions using Terra examined how the instruction was deliver
 
 These findings distinguish exposure to malicious content from its storage in long-term memory. The results apply to the tested environment and do not evaluate retrieval or subsequent use of stored memories.
 
-## Research materials
+## Files
 
 - [Methodology](docs/methodology.md) — Experimental environment and evaluation.
 - [Results](results/model_results.csv) — Three-model comparison.
@@ -49,11 +45,7 @@ These findings distinguish exposure to malicious content from its storage in lon
 - [Python analysis](src/memory_write_analysis.py) — Data validation and result aggregation.
 - [Paper overview](paper/overview.md) — Abstract and bibliographic information.
 
-### Reproduce the summary
-
 The summary table can be recalculated using Python 3.10 or later:
 
-```bash
-python scripts/analyze.py --check
-python -m unittest discover -s tests -v
-```
+    python scripts/analyze.py --check
+    python -m unittest discover -s tests -v
